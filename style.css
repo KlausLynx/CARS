@@ -1,0 +1,284 @@
+@import url(https://fonts.google.com/specimen/Big+Shoulders+Display);
+
+/* || RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root {
+        /* COLORS */
+        --ANYLINK-COLOR: #1837b5;
+        --HOVER-ACTIVE-COLOR: #800080;
+        --LUXURY-BG-COLOR: #004241;
+        --LUXURY-H1-COLOR: #ffffff;
+        --P-COLOR: #ffffff;
+        --SEDANS-BG-COLOR: #e38826;
+        --SEDANS-H1-COLOR: #ffffff;
+        --SUV-BG-COLOR: #006970; 
+        --SUV-H1-COLOR: #ffffff;
+        
+        /* FONTS */
+        --ATTRIBUTION-FS: 2rem;
+        --BODY-FF: 'Big Shoulders' sans-serif;
+        --BODY-FW: 700;
+        --P-FS: 1.5rem;
+
+        /* DISPLAY */
+        --A-P-DISPLAY: grid;
+        --CT-DISPLAY: flex;
+        --LUXURY-DISPLAY: grid;
+        --SEDANS-DISPLAY: grid;
+        --SUV-DISPLAY: grid;
+
+        /* GRID PROPERTIES */
+        --A-P-ALIGN-ITEMS: center;
+        --A-P-JUSTIFY-ITEMS: center;
+
+        /* BORDERS */
+        --A-P-BORDER-RADIUS: 30px;
+        --A-P-BORDER: 2px solid white;
+        --LUXURY-BORDER-BR-RADIUS: 10px;
+        --LUXURY-BORDER-TR-RADIUS: 10px;
+        --SEDANS-BORDER-BL-RADIUS: 10px;
+        --SEDANS-BORDER-TL-RADIUS: 10px;
+    
+        /* STANDARD PADDING */
+        --LUXURY-H1-PADDING: 0 0 1rem 0;
+        --LUXURY-PADDING: 2rem;
+        --SEDANS-H1-PADDING: 0 0 1rem 0;
+        --SEDANS-PADDING: 2rem;
+        --SUV-H1-PADDING: 0 0 1rem 0;
+        --SUV-PADDING: 2rem;
+
+        /* STANDARD MARGIN */
+        --CT-MARGIN: 8rem auto 0 auto;
+
+        /* WIDTH && HEIGHT */
+        --A-P-HEIGHT: 45px;
+        --A-P-WIDTH: 150px;
+        --CT-HEIGHT: 70vh;
+        --CT-MAXW: 900px;
+
+        /* GAP */
+        --LUXURY-RG: 20px;
+        --SEDANS-RG: 20px;
+        --SUV-RG: 20px;
+
+        /* TEXT */
+        --ANYLINK-TD: none;
+        --ATTRIBUTION-TA: center;
+        --LUXURY-H1-TT: uppercase;
+        --P-LINE-HEIGHT: 30px;
+        --SEDANS-H1-TT: uppercase;
+        --SUV-H1-TT: uppercase;
+}
+
+/* ///////////////GENERAL STYLES\\\\\\\\\\\\\\\ */
+
+body {
+    font-family: var(--BODY-FF);
+    font-weight: var(--BODY-FW);
+}
+
+.container {
+    display: var(--CT-DISPLAY);
+    height: var(--CT-HEIGHT);
+    margin: var(--CT-MARGIN);
+    max-width: var(--CT-MAXW);
+}
+
+.sedans {
+    background-color: var(--SEDANS-BG-COLOR);
+    border-bottom-left-radius: var(--SEDANS-BORDER-BL-RADIUS);
+    border-top-left-radius: var(--SEDANS-BORDER-TL-RADIUS);
+    display: var(--SEDANS-DISPLAY);
+    min-width: 300px;
+    padding: var(--SEDANS-PADDING);
+    row-gap: var(--SEDANS-RG);
+}
+
+.sedans h1 {
+    color: var(--SEDANS-H1-COLOR);
+    padding: var(--SEDANS-H1-PADDING);
+    text-transform: var(--SEDANS-H1-TT);
+}
+
+.suv {
+    background-color: var(--SUV-BG-COLOR); 
+    display: var(--SUV-DISPLAY);
+    min-width: 300px;
+    padding: var(--SUV-PADDING);
+    row-gap: var(--SUV-RG);
+}
+
+.suv h1 {
+    color: var(--SUV-H1-COLOR);
+    padding: var(--SUV-H1-PADDING);
+    text-transform: var(--SUV-H1-TT);
+}
+
+.luxury {
+    background-color: var(--LUXURY-BG-COLOR);
+    border-bottom-right-radius: var(--LUXURY-BORDER-BR-RADIUS);
+    border-top-right-radius: var(--LUXURY-BORDER-TR-RADIUS);
+    display: var(--LUXURY-DISPLAY);
+    min-width: 300px;
+    padding: var(--LUXURY-PADDING);
+    row-gap: var(--LUXURY-RG);
+}
+
+.luxury h1 {
+    color: var(--LUXURY-H1-COLOR);
+    padding: var(--LUXURY-H1-PADDING);
+    text-transform: var(--LUXURY-H1-TT);
+}
+
+
+p {
+    color: var(--P-COLOR);
+    font-size: var(--P-FS);
+    line-height: var(--P-LINE-HEIGHT);
+}
+
+a:any-link {
+    color: var(--ANYLINK-COLOR);
+    text-decoration: var(--ANYLINK-TD);
+}
+
+a:hover, a:active{
+    color: var(--HOVER-ACTIVE-COLOR);
+}
+
+a p {
+    align-items: var(--A-P-ALIGN-ITEMS);
+    border-radius: var(--A-P-BORDER-RADIUS);
+    border: var(--A-P-BORDER);
+    display: var(--A-P-DISPLAY);
+    height: var(--A-P-HEIGHT);
+    justify-items: var(--A-P-JUSTIFY-ITEMS);
+    width: var(--A-P-WIDTH);
+}
+
+a p:hover {
+    box-shadow:#000000cc 0px 5px 15px, inset #00000026 0px -10px 20px;
+}
+
+.attribution { font-size: var(--ATTRIBUTION-FS); text-align: var(--ATTRIBUTION-TA); }
+
+/* ///////////////MEDIA QUERIES\\\\\\\\\\\\\\\ */
+
+/* ///////////////VARIABLES\\\\\\\\\\\\\\\\ */
+
+:root {
+    /* BORDERS */
+    --MEDIA-LUXURY-BORDER-BL-RADIUS: 15px;
+    --MEDIA-LUXURY-BORDER-BR-RADIUS: 15px;
+    --MEDIA-LUXURY-BORDER-TR-RADIUS: 0px;
+    --MEDIA-SEDANS-BORDER-BL-RADIUS: 0px;
+    --MEDIA-SEDANS-BORDER-TL-RADIUS: 15px;
+    --MEDIA-SEDANS-BORDER-TR-RADIUS: 15px;
+
+    /* DISPLAY */
+    --MEDIA-CT-DISPLAY: grid;
+
+    /* FONTS */
+    --MEDIA-H1-FS: 4rem;
+    --MEDIA-P-FS: 1.5rem;
+
+    /* GAP */
+    --MEDIA-LUXURY-RG: 9px;
+    --MEDIA-SEDANS-RG: 9px;
+    --MEDIA-SUV-RG: 9px;
+
+    /* STANDARD PADDING */
+    --MEDIA-CT-PADDING: 0 2rem 0 2rem;
+    --MEDIA-LUXURY-PADDING: 2rem;
+    --MEDIA-SEDANS-PADDING: 2rem;
+    --MEDIA-SUV-PADDING: 2rem;
+
+    /* TEXT */
+    --MEDIA-P-LINE-HEIGHT: 40px;
+
+    /* WIDTH && HEIGHT */
+    --FIRST-MEDIA-CT-HEIGHT: 150vh;
+    --FIRST-MEDIA-CT-MAXW: 375px;
+    --MEDIA-A-P-HEIGHT: 60px;
+    --MEDIA-A-P-WIDTH: 200px;
+    --MEDIA-CT-HEIGHT: 300vh;
+    --MEDIA-CT-MINW: 100vw;
+    --MEDIA-LUXURY-HEIGHT: 100vh;
+    --MEDIA-LUXURY-WIDTH: 300px;
+    --MEDIA-SEDANS-HEIGHT: 100vh;
+    --MEDIA-SEDANS-WIDTH: 300px;
+    --MEDIA-SUV-HEIGHT: 100vh;
+    --MEDIA-SUV-WIDTH: 300px;
+}
+
+  /* This is based on prefrence */
+
+ /* @media screen and (max-width: 576px) {
+    .container {
+        height: var(--FIRST-MEDIA-CT-HEIGHT);
+        max-width: var(--FIRST-MEDIA-CT-MAXW);
+    }
+} */
+
+@media screen and (max-width: 576px) {
+    body {
+        font-weight: var(--MEDIA-BODY-FW);
+    }
+
+    .container {
+        display: var(--MEDIA-CT-DISPLAY);
+        padding: var(--MEDIA-CT-PADDING);
+        height: var(--MEDIA-CT-HEIGHT);
+        min-width: var(--MEDIA-CT-MINW);
+    }
+
+    .sedans {
+        border-top-left-radius: var(--MEDIA-SEDANS-BORDER-TL-RADIUS);
+        border-top-right-radius: var(--MEDIA-SEDANS-BORDER-TR-RADIUS);
+        border-bottom-left-radius: var(--MEDIA-SEDANS-BORDER-BL-RADIUS);
+        padding: var(--MEDIA-SEDANS-PADDING);
+        row-gap: var(--MEDIA-SEDANS-RG);
+        width: var(--MEDIA-SEDANS-WIDTH);
+        height: var(--MEDIA-SEDANS-HEIGHT);
+    }
+
+    .suv {
+        padding: var(--MEDIA-SUV-PADDING);
+        row-gap: var(--MEDIA-SUV-RG);
+        width: var(--MEDIA-SUV-WIDTH);
+        height: var(--MEDIA-SUV-HEIGHT);
+    }
+
+    .luxury {
+        border-top-right-radius: var(--MEDIA-LUXURY-BORDER-TR-RADIUS);
+        border-bottom-right-radius: var(--MEDIA-LUXURY-BORDER-BR-RADIUS);
+        border-bottom-left-radius: var(--MEDIA-LUXURY-BORDER-BL-RADIUS);
+        padding: var(--MEDIA-LUXURY-PADDING);
+        row-gap: var(--MEDIA-LUXURY-RG);
+        width: var(--MEDIA-LUXURY-WIDTH);
+        height: var(--MEDIA-LUXURY-HEIGHT);
+    }
+
+    h1 {
+        font-size: var(--MEDIA-H1-FS);
+    }
+
+    p {
+        line-height: var(--MEDIA-P-LINE-HEIGHT);
+        font-size: var(--MEDIA-P-FS);
+    }
+
+    a p {
+        height: var(--MEDIA-A-P-HEIGHT);
+        width: var(--MEDIA-A-P-WIDTH);
+    }
+}
+
